@@ -54,7 +54,13 @@
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.setCurr = new MetroFramework.Controls.MetroButton();
             this.folder = new MetroFramework.Controls.MetroButton();
+            this.ContextMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeWallpaperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AutoChangeMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuAutoSave = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // saveImg
@@ -334,7 +340,7 @@
             // 
             // notifyIcon
             // 
-            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.Text = "WallpaperChanger";
             this.notifyIcon.Visible = true;
             this.notifyIcon.Click += new System.EventHandler(this.notifyIcon_Click);
             this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
@@ -433,13 +439,51 @@
             // 
             // folder
             // 
-            this.folder.Location = new System.Drawing.Point(22, 277);
+            this.folder.Location = new System.Drawing.Point(22, 262);
             this.folder.Name = "folder";
             this.folder.Size = new System.Drawing.Size(122, 23);
             this.folder.TabIndex = 21;
             this.folder.Text = "Open Saved folder";
             this.folder.UseSelectable = true;
             this.folder.Click += new System.EventHandler(this.folder_Click);
+            // 
+            // ContextMenu
+            // 
+            this.ContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeWallpaperToolStripMenuItem,
+            this.AutoChangeMenu,
+            this.MenuAutoSave,
+            this.exitToolStripMenuItem});
+            this.ContextMenu.Name = "ContextMenu";
+            this.ContextMenu.Size = new System.Drawing.Size(186, 114);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // changeWallpaperToolStripMenuItem
+            // 
+            this.changeWallpaperToolStripMenuItem.Name = "changeWallpaperToolStripMenuItem";
+            this.changeWallpaperToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.changeWallpaperToolStripMenuItem.Text = "Change Wallpaper";
+            this.changeWallpaperToolStripMenuItem.Click += new System.EventHandler(this.changeWallpaperToolStripMenuItem_Click);
+            // 
+            // AutoChangeMenu
+            // 
+            this.AutoChangeMenu.Name = "AutoChangeMenu";
+            this.AutoChangeMenu.Size = new System.Drawing.Size(185, 22);
+            this.AutoChangeMenu.Text = "On/Off Auto Change";
+            this.AutoChangeMenu.Click += new System.EventHandler(this.AutoChangeMenu_Click);
+            // 
+            // MenuAutoSave
+            // 
+            this.MenuAutoSave.Name = "MenuAutoSave";
+            this.MenuAutoSave.Size = new System.Drawing.Size(185, 22);
+            this.MenuAutoSave.Text = "On/Off auto save";
+            this.MenuAutoSave.Click += new System.EventHandler(this.MenuAutoSave_Click);
             // 
             // Form1
             // 
@@ -475,6 +519,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,6 +551,11 @@
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton setCurr;
         private MetroFramework.Controls.MetroButton folder;
+        private MetroFramework.Controls.MetroContextMenu ContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changeWallpaperToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AutoChangeMenu;
+        private System.Windows.Forms.ToolStripMenuItem MenuAutoSave;
     }
 }
 

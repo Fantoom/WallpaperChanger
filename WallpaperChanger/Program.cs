@@ -32,6 +32,7 @@ namespace WallpaperChanger
         public static string height;
         public static byte[] data;
         public static byte[] CustomData;
+        public static Form1 form;
 
         /// </summary>
 
@@ -39,16 +40,31 @@ namespace WallpaperChanger
         [STAThread]
         static void Main()
         {
+            //Check if Application already running
             if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
             {
-
-
                 MessageBox.Show("Application already running. Only one instance of this application is allowed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            //Check internet connection
+            try
+            {
+                using (var client = new WebClient())
+                using (client.OpenRead("http://google.com"))
+                {
+                  
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Check Internet connection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return ;
+            }
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(form = new Form1());
 
             Console.WriteLine("main");
 
@@ -88,7 +104,7 @@ namespace WallpaperChanger
         {
             System.IO.Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "saved");
             CreateLink();
-            var form = Form.ActiveForm as Form1;
+            
 
             using (WebClient client = new WebClient())
             {
@@ -136,7 +152,7 @@ namespace WallpaperChanger
         {
             System.IO.Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "saved");
             CreateLink();
-            var form = Form.ActiveForm as Form1;
+            
 
             using (WebClient client = new WebClient())
             {
@@ -171,7 +187,7 @@ namespace WallpaperChanger
         public static void showNext()
         {
             CreateLink();
-            var form = Form.ActiveForm as Form1;
+            
 
             using (WebClient client = new WebClient())
             {

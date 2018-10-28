@@ -15,9 +15,10 @@ namespace WallpaperChanger
 {
     public partial class Form1 : Form
     {
-        ContextMenu contextMenu1;
-        MenuItem menuItem1;
+        /*  ContextMenu contextMenu1;
+          MenuItem menuItem1;*/
         //private System.Windows.Forms.NotifyIcon notifyIcon;
+        bool ContextAutoCheck;
         public Form1()
         {
             //notifyIcon = new System.Windows.Forms.NotifyIcon();
@@ -29,7 +30,9 @@ namespace WallpaperChanger
             Program.source = source.Text;
             Program.keywords = keywords.Text;
             timer1.Interval = int.Parse(TimerSec.Text) * 1000;
-           
+            notifyIcon.ContextMenuStrip = ContextMenu;
+            ContextAutoCheck = timer1.Enabled;
+            autoChange.Checked = ContextAutoCheck;
             if (saveImg.Checked)
             {
                 Program.isSave = true;
@@ -243,6 +246,45 @@ namespace WallpaperChanger
         private void folder_Click(object sender, EventArgs e)
         {
             Process.Start(AppDomain.CurrentDomain.BaseDirectory + "saved");
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void AutoChangeMenu_Click(object sender, EventArgs e)
+        {
+            AutoChangeMenu.Checked = !AutoChangeMenu.Checked;
+            autoChange.Checked = AutoChangeMenu.Checked;
+            if (autoChange.Checked)
+            {
+                timer1.Enabled = true;
+            }
+            else
+            {
+                timer1.Enabled = false;
+
+            }
+        }
+
+        private void MenuAutoSave_Click(object sender, EventArgs e)
+        {
+            MenuAutoSave.Checked = !MenuAutoSave.Checked;
+            saveImg.Checked = saveImg.Checked;
+            if (saveImg.Checked)
+            {
+                Program.isSave = true;
+            }
+            else
+            {
+                Program.isSave = false;
+
+            }
+        }
+
+        private void changeWallpaperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.changeWallpaper();
         }
     }
 }
