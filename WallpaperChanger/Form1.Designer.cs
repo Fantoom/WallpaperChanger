@@ -53,6 +53,7 @@
             this.save = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.setCurr = new MetroFramework.Controls.MetroButton();
+            this.folder = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -430,12 +431,23 @@
             this.setCurr.UseSelectable = true;
             this.setCurr.Click += new System.EventHandler(this.setCurr_Click);
             // 
+            // folder
+            // 
+            this.folder.Location = new System.Drawing.Point(22, 277);
+            this.folder.Name = "folder";
+            this.folder.Size = new System.Drawing.Size(122, 23);
+            this.folder.TabIndex = 21;
+            this.folder.Text = "Open Saved folder";
+            this.folder.UseSelectable = true;
+            this.folder.Click += new System.EventHandler(this.folder_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(646, 312);
+            this.Controls.Add(this.folder);
             this.Controls.Add(this.setCurr);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.save);
@@ -493,6 +505,7 @@
         private MetroFramework.Controls.MetroButton save;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton setCurr;
+        private MetroFramework.Controls.MetroButton folder;
     }
 }
 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
 using System.IO;
-
+using System.Diagnostics;
 namespace WallpaperChanger
 {
     public partial class Form1 : Form
@@ -238,6 +238,11 @@ namespace WallpaperChanger
         {
             Program.setCurrent();
 
+        }
+
+        private void folder_Click(object sender, EventArgs e)
+        {
+            Process.Start(AppDomain.CurrentDomain.BaseDirectory + "saved");
         }
     }
 }
