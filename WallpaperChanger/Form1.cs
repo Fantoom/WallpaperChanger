@@ -271,7 +271,7 @@ namespace WallpaperChanger
         private void MenuAutoSave_Click(object sender, EventArgs e)
         {
             MenuAutoSave.Checked = !MenuAutoSave.Checked;
-            saveImg.Checked = !saveImg.Checked;
+            saveImg.Checked = MenuAutoSave.Checked;
             if (saveImg.Checked)
             {
                 Program.isSave = true;
