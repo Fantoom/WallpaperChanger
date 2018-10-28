@@ -1,0 +1,14 @@
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\bin\Debug\WallpaperChanger.exe.config
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\bin\Debug\WallpaperChanger.exe
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\bin\Debug\WallpaperChanger.pdb
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\bin\Debug\MetroFramework.Design.dll
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\bin\Debug\MetroFramework.dll
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\obj\Debug\WallpaperChanger.csprojAssemblyReference.cache
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\obj\Debug\WallpaperChanger.Form1.resources
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\obj\Debug\WallpaperChanger.Properties.Resources.resources
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\obj\Debug\WallpaperChanger.csproj.GenerateResource.cache
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\obj\Debug\WallpaperChanger.csproj.CoreCompileInputs.cache
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\obj\Debug\WallpaperChanger.csproj.CopyComplete
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\obj\Debug\WallpaperChanger.exe
+C:\Users\serge\source\repos\WallpaperChanger\WallpaperChanger\obj\Debug\WallpaperChanger.pdb
