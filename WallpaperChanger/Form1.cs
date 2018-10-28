@@ -18,7 +18,7 @@ namespace WallpaperChanger
         /*  ContextMenu contextMenu1;
           MenuItem menuItem1;*/
         //private System.Windows.Forms.NotifyIcon notifyIcon;
-        bool ContextAutoCheck;
+        
         public Form1()
         {
             //notifyIcon = new System.Windows.Forms.NotifyIcon();
@@ -31,8 +31,9 @@ namespace WallpaperChanger
             Program.keywords = keywords.Text;
             timer1.Interval = int.Parse(TimerSec.Text) * 1000;
             notifyIcon.ContextMenuStrip = ContextMenu;
-            ContextAutoCheck = timer1.Enabled;
-            autoChange.Checked = ContextAutoCheck;
+            autoChange.Checked = timer1.Enabled;
+            AutoChangeMenu.Checked = autoChange.Checked;
+            MenuAutoSave.Checked = saveImg.Checked;
             if (saveImg.Checked)
             {
                 Program.isSave = true;
@@ -270,7 +271,7 @@ namespace WallpaperChanger
         private void MenuAutoSave_Click(object sender, EventArgs e)
         {
             MenuAutoSave.Checked = !MenuAutoSave.Checked;
-            saveImg.Checked = saveImg.Checked;
+            saveImg.Checked = !saveImg.Checked;
             if (saveImg.Checked)
             {
                 Program.isSave = true;
@@ -286,5 +287,6 @@ namespace WallpaperChanger
         {
             Program.changeWallpaper();
         }
+
     }
 }
